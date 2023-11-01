@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-print(''.join(chr(i) for i in range(97, 123)), end='')
+for char_ascii in range(97, 123):
+    print("{char_ascii:c}".format(char_ascii=char_ascii), end='')
