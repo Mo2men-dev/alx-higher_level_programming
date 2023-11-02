@@ -2,19 +2,21 @@
 import sys
 
 if __name__ == "__main__":
-    length = len(sys.argv) - 1
-    argstr = "{:d} argument"
+    exit()
 
-    if length == 1:
-        argstr += ":"
-    elif length == 0:
-        argstr += "."
-    else:
-        argstr += "s:"
+length = len(sys.argv) - 1
+argstr = "{:d} argument"
 
-    print(argstr.format(length))
+if length == 1:
+    argstr += ":"
+elif length == 0:
+    argstr += "."
+else:
+    argstr += "s:"
 
-    i = 1
-    for a in sys.argv[1:]:
-        print("{:d}: {:s}".format(i, a))
-        i += 1
+print(argstr.format(length))
+
+i = 1
+for a in sys.argv[1:]:
+    print("{:d}: {:s}".format(i, a))
+    i += 1
