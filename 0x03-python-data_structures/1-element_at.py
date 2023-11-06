@@ -1,10 +1,7 @@
 #!/usr/bin/python3
 
 def element_at(my_list, idx):
-    list_len = len(my_list)
+    list_len = len(my_list) - 1
     if (idx > list_len or idx < 0):
-        return None
-    i = 0
-    for i in range(list_len - 1):
-        if i == idx:
-            return my_list[i]
+        return (None)
+    return (my_list[idx])
