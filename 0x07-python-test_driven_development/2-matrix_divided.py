@@ -1,5 +1,24 @@
 #!/usr/bin/python3
+"""This is the hello module."""
+
+
 def matrix_divided(matrix, div):
+    """This is the matrix_divided function.
+
+    Args:
+        matrix (list): list of lists of integers/floats
+        div (int/float): number to divide matrix by
+
+    Returns:
+        list: list of lists of divided numbers
+
+    Raises:
+        TypeError: if matrix is not a list of lists of integers/floats
+        TypeError: if matrix contains rows of different sizes
+        TypeError: if div is not an int or float
+        ZeroDivisionError: if div is 0
+    """
+
     errorMessage = "matrix must be a matrix (list of lists) of integers/floats"
     if not matrix:
         raise TypeError(errorMessage)
