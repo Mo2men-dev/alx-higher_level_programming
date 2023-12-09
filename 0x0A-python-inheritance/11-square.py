@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Module that defines a square class"""
+Rectangle = __import__("9-rectangle").Rectangle
 
 
 class Square(Rectangle):
@@ -9,6 +10,7 @@ class Square(Rectangle):
         """__init__ method that initializes size"""
         self.integer_validator("size", size)
         self.__size = size
+        super().__init__(size, size)
 
     def area(self):
         """area method that returns area of Square"""
