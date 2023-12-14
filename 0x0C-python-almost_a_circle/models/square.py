@@ -32,6 +32,15 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def __str__(self):
+        """ str special method """
+        str_rectangle = "[Square] "
+        str_id = "({}) ".format(self.id)
+        str_xy = "{}/{} - ".format(self.x, self.y)
+        str_size = "{}".format(self.size)
+
+        return str_rectangle + str_id + str_xy + str_size
+
     def update(self, *args, **kwargs):
         """ update method """
         if args is not None and len(args) is not 0:
