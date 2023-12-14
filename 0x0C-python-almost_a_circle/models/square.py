@@ -2,9 +2,7 @@
 """ Module that contains class Square,
 inheritance of class Rectangle
 """
-
-
-from models.rectangle import Rectangle
+from rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -35,7 +33,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """ update method """
-        if args is not None and len(args) is not 0:
+        if args is not None and len(args) != 0:
             list_atr = ['id', 'size', 'x', 'y']
             for i in range(len(args)):
                 if list_atr[i] == 'size':
