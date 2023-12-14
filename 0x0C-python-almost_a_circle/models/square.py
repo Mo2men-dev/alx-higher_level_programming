@@ -53,7 +53,7 @@ class Square(Rectangle):
                     setattr(self, key, value)
 
     def to_dictionary(self):
-        """Returns a dict of the class attrs"""
+        """ Returns a dict of the class attrs """
         attr_list = ["id", "size", "x", "y"]
         dic = {}
         for i in attr_list:
