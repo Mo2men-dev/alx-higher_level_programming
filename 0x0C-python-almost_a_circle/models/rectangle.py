@@ -1,7 +1,10 @@
 #!/usr/bin/python3
-""" Module that contains class Rectangle,
+"""
+Module that contains class Rectangle,
 inheritance of class Base
 """
+
+
 from base import Base
 
 

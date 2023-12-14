@@ -1,7 +1,10 @@
 #!/usr/bin/python3
-""" Module that contains class Square,
+"""
+Module that contains class Square,
 inheritance of class Rectangle
 """
+
+
 from rectangle import Rectangle
 
 
