@@ -50,3 +50,14 @@ class Square(Rectangle):
                     setattr(self, 'height', value)
                 else:
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Returns a dict of the class attrs"""
+        attr_list = ["id", "size", "x", "y"]
+        dic = {}
+        for i in attr_list:
+            if i == "size":
+                dic[i] = getattr(self, 'width')
+            dic[i] = getattr(self, i)
+
+        return dic
