@@ -71,3 +71,14 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    def area(self):
+        "return the are of the rectangle"
+        return self.width * self.height
+
+    def display(self):
+        "display the rectangle"
+        for i in range(self.height):
+            for j in range(self.width):
+                print("#", end="")
+            print("\n", end="")
