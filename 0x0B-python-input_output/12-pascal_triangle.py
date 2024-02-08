@@ -2,7 +2,7 @@
 """pascal triangle using list of lists module"""
 
 
-def pascal_tri(n):
+def pascal_triangle(n):
     """
     prints the pascal triangle
 
