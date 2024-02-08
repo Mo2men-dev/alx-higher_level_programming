@@ -23,5 +23,4 @@ def pascal_tri(n):
         temp.append(1)
         o.append(temp)
 
-    for i in range(len(o)):
-        print(o[i])
+    return o
