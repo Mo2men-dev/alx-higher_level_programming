@@ -12,6 +12,9 @@ def pascal_triangle(n):
     Returns:
         list: list of lists of integers
     """
+    if n <= 0:
+        return []
+
     o = [[1], [1, 1]]
     for i in range(1, n - 1):
         temp = []
