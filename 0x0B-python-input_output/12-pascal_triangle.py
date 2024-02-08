@@ -4,13 +4,13 @@
 
 def pascal_triangle(n):
     """
-    prints the pascal triangle
+    This function returns the first n rows of Pascal's triangle.
 
     Args:
-        n (int): number of rows to be printed
+        n (int): number of rows to return
 
     Returns:
-        None
+        list: list of lists of integers
     """
     o = [[1], [1, 1]]
     for i in range(1, n - 1):
@@ -22,5 +22,4 @@ def pascal_triangle(n):
 
         temp.append(1)
         o.append(temp)
-
     return o
