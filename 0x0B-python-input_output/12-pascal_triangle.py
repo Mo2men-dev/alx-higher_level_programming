@@ -16,7 +16,7 @@ def pascal_triangle(n):
         return []
 
     if n == 1:
-        return [1]
+        return [[1]]
 
     o = [[1], [1, 1]]
     for i in range(1, n - 1):
