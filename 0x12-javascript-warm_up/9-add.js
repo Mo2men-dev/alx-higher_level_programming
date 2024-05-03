@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const { argv } = require('process');
 
-function add(a, b) {
+function add (a, b) {
   let result = Number(a) + Number(b);
   return Number(result);
 }
