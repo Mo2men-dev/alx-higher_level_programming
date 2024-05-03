@@ -1,13 +1,12 @@
 #!/usr/bin/node
 const { argv } = require('process');
 
-
-function factorial(n) {
+function factorial (n) {
   if (isNaN(n)) {
     return 1;
   }
 
- if (n === 0) {
+  if (n === 0) {
     return 1;
   }
 
