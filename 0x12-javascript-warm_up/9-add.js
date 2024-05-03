@@ -2,7 +2,7 @@
 const { argv } = require('process');
 
 function add (a, b) {
-  let result = Number(a) + Number(b);
+  const result = Number(a) + Number(b);
   return Number(result);
 }
 
