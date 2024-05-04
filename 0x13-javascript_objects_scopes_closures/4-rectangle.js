@@ -7,10 +7,11 @@ module.exports = class Rectangle {
     }
   }
 
-  print () {
+  print (c) {
+    if (!c) c = 'X';
     for (let x = 0; x < this.height; x++) {
       for (let y = 0; y < this.width; y++) {
-        process.stdout.write('X');
+        process.stdout.write(c);
       }
       console.log();
     }
