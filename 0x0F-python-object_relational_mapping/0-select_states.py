@@ -4,21 +4,22 @@
 import sys
 import MySQLdb
 
-def connect_sql():
-    """
-    connect to sql server
+
+def sql_connect():
+    """connect to sql server
     """
     try:
-        cnct = MySQLdb.connect('localhost', sys.argv[1], sys.argv[2], sys.argv[3])
-    except Exception as e:
-        raise("couldn't connect to sql server")
+        connection = MySQLdb.connect(
+                'localhost', sys.argv[1], sys.argv[2], sys.argv[3])
+    except Exception as err:
+        raise err("can't connect to sql server")
         return 0
-
-    cur = cnct.cursor()
-    cur.execute('select * from states order by states.id')
-    arr = cur.fetchall()
+    curse = connection.cursor()
+    curse.execute('select * from states order by states.id')
+    arr = curse.fetchall()
     for data in arr:
         print(data)
 
+
 if __name__ == '__main__':
-    connect_sql()
+    sql_connect()
