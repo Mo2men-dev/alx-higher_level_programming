@@ -21,4 +21,4 @@ def connect_sql():
         print(data)
 
 if __name__ == '__main__':
-    sql_connect()
+    connect_sql()
