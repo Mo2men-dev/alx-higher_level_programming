@@ -15,7 +15,7 @@ def connect_sql():
         return 0
 
     cur = cnct.cursor()
-    curse.execute('select * from states order by states.id')
+    cur.execute('select * from states order by states.id')
     arr = cur.fetchall()
     for data in arr:
         print(data)
