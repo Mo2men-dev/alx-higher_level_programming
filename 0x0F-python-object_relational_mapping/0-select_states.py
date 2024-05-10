@@ -14,9 +14,9 @@ def connect_sql():
         raise("couldn't connect to sql server")
         return 0
 
-    cur = connection.cursor()
+    cur = cnct.cursor()
     curse.execute('select * from states order by states.id')
-    arr = curse.fetchall()
+    arr = cur.fetchall()
     for data in arr:
         print(data)
 
