@@ -3,6 +3,7 @@
 list all states starting with 'N'
 """
 
+
 import MySQLdb
 import sys
 
@@ -10,6 +11,8 @@ def get_states():
     """
     same as module doc
     """
+
+
     usr, pw, name = sys.argv[1], sys.argv[2], sys.argv[3]
 
     try:
@@ -18,7 +21,7 @@ def get_states():
         raise err("couldn't connect to db")
 
     c = db.cursor()
-    c.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id")
+    c.execute("SELECT * FROM states WHERE name COLLATE utf8mt4_bin LIKE 'N%' ORDER BY states.id")
     arr = c.fetchall()
     for e in arr:
         print(e)
