@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""list all states acc to names
+"""
+displays the states based on args
 """
 
 import sys
