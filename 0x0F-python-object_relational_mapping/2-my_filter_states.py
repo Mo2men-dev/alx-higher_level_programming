@@ -21,7 +21,7 @@ def connect_db():
 
     c = db.cursor()
     c.execute('''SELECT * FROM states WHERE name = \'{}\'
-            ORDER BY state.id'''.format(state_name))
+            ORDER BY states.id'''.format(state_name))
     arr = c.fetchall()
     for e in arr:
         print(e)
