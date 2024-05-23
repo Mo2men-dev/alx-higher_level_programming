@@ -17,7 +17,7 @@ def connect_db():
         db = MySQLdb.connect('localhost', usr, pw, name)
 
     except Exception as e:
-        raise ("couldn't conncet to db")
+        raise e("couldn't conncet to db")
 
     c = db.cursor()
     c.execute('''SELECT * FROM states WHERE name LIKE BINARY \'{}\'
