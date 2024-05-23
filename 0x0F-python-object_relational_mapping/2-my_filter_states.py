@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-displays values from args
+"""displays values from args
 """
 
 import sys
