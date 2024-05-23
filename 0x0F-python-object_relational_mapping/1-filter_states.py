@@ -8,12 +8,8 @@ import sys
 
 
 def get_states():
-
-
+    """same as module doc
     """
-    same as module doc
-    """
-
     usr, pw, name = sys.argv[1], sys.argv[2], sys.argv[3]
 
     try:
@@ -27,6 +23,7 @@ def get_states():
     arr = c.fetchall()
     for e in arr:
         print(e)
+
 
 if __name__ == '__main__':
     get_states()
