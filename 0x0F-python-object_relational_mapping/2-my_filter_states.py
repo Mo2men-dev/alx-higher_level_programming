@@ -6,7 +6,7 @@ import sys
 import MySQLdb
 
 
-def connect_db:
+def connect_db():
     """connects to the db
     """
     args = sys.argv
