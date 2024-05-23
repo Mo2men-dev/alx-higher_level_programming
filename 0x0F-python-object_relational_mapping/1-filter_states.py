@@ -6,7 +6,9 @@ list all states starting with 'N'
 import MySQLdb
 import sys
 
+
 def get_states():
+
 
     """
     same as module doc
@@ -20,7 +22,7 @@ def get_states():
         raise err("couldn't connect to db")
 
     c = db.cursor()
-    c.execute('''SELECT * FROM states WHERE name 
+    c.execute('''SELECT * FROM states WHERE name
             LIKE BINARY 'N%' ORDER BY states.id''')
     arr = c.fetchall()
     for e in arr:
