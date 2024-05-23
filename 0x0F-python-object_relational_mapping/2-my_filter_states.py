@@ -20,7 +20,7 @@ def connect_db():
         raise("couldn't conncet to db")
 
     c = db.cursor()
-    c.execute('''SELECT * FROM states WHERE name = \'{}\'
+    c.execute('''SELECT * FROM states WHERE name LIKE BINARY \'{}\'
             ORDER BY states.id'''.format(state_name))
     arr = c.fetchall()
     for e in arr:
