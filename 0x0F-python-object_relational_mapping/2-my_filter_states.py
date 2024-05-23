@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""displays values from args
+"""
+displays values from args
 """
 
 import sys
@@ -17,7 +18,7 @@ except Exception as e:
     raise("couldn't conncet to db")
 
 c = db.cursor()
-c.execute("SELECT * FROM states WHERE name = \'{}\'".format(state_name))
+c.execute("SELECT * FROM states WHERE name = \'{}\' ORDER BY state.id".format(state_name))
 arr = c.fetchall()
 for e in arr:
     print(e)
