@@ -23,7 +23,7 @@ def connect_db():
     c.execute('SELECT * FROM states')
     arr = c.fetchall()
     for e in arr:
-        if e == state_name:
+        if e[1] == state_name:
             print(e)
 
 
