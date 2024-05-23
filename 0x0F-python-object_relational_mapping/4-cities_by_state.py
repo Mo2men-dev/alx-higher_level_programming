@@ -15,7 +15,10 @@ def sql_connect():
         raise err("can't connect to sql server")
         return 0
     curse = connection.cursor()
-    curse.execute('SELECT * FROM cities ORDER BY cities.id')
+    curse.execute('''SELECT cities.id, cities.name, state.name
+            FROM cities INNER JOIN states
+            ON states.id = cities.state_id
+            ORDER BY cities.id''')
     arr = curse.fetchall()
     for data in arr:
         print(data)
