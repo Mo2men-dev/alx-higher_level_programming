@@ -15,7 +15,7 @@ def sql_connect():
         raise err("can't connect to sql server")
         return 0
     curse = connection.cursor()
-    curse.execute('''SELECT cities.id, cities.name, state.name
+    curse.execute('''SELECT cities.id, cities.name, states.name
             FROM cities INNER JOIN states
             ON states.id = cities.state_id
             ORDER BY cities.id''')
