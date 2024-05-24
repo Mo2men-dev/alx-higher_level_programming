@@ -26,6 +26,11 @@ def connect_db():
             WHERE states.name = \'{}\')""".format(state_name))
 
     arr = c.fetchall()
+
+    if len(arr) == 0:
+        print()
+        return
+
     for i, e in enumerate(arr):
         if i != len(arr) - 1:
             print(e[0], end=", ")
