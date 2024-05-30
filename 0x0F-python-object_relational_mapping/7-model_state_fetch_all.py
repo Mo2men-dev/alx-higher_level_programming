@@ -2,7 +2,7 @@
 """a select query using SQLA
 """
 
-import sys.argv
+from sys import argv
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
