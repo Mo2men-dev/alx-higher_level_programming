@@ -23,6 +23,7 @@ def create_session():
         res = session.query(State).first()
         print("{}: {}".format(res.id, res.name))
     except Exception as e:
+        print("Nothing")
         raise Exception("Couldn't excute query", e)
     finally:
         session.close()
