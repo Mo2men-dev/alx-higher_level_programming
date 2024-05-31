@@ -2,7 +2,7 @@
 """module for the cities model
 """
 
-from model_state import Base
+from relationship_state import Base
 from sqlalchemy import Column, Integer, String, ForeignKey
 
 
