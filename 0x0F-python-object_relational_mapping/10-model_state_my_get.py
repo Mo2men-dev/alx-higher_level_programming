@@ -20,8 +20,8 @@ def create_session():
     session = Session()
 
     try:
-        count = session.query(State).filter_by(name=argv[4]).count()
-        print(count)
+        state = session.query(State).filter_by(name=argv[4]).first()
+        print(state.id)
     except Exception as e:
         print("Not found")
         raise Exception("Couldn't excute query", e)
